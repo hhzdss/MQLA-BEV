@@ -2,7 +2,11 @@
 
 ## Task
 
-Three-dimensional object detection under camera and LiDAR sensor degradation. Training applies online sensor corruptions to support robustness learning.
+MQLA-BEV targets ship 3D detection under camera and LiDAR degradation. It is evaluated on a multiview subset of the Pohang Canal Dataset; vessel 3D boxes were annotated in LiDAR coordinates with SUSTechPOINTS and verified in the front, left, and right camera views.
+
+The robustness protocol covers nine individual corruption types and five combined conditions, including rain and fog, illumination changes, camera-view loss, LiDAR point or beam dropout, scan-motion blur, and calibration shifts. Online corruption sampling during training uses a user-configured record count.
+
+The model maps camera and LiDAR features to a shared BEV space, dynamically weights them according to local observation quality, and uses LiDAR-guided local attention to aggregate nearby valid camera features before ship 3D box prediction.
 
 ## Model structure
 
