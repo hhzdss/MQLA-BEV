@@ -1,0 +1,9 @@
+# Project runtime: Linux, Python 3.10, one CUDA-capable GPU.
+# Install the CUDA-matched PyTorch and torchvision builds before this file.
+# MMDetection3D 1.4.0 framework constraints:
+mmengine>=0.7.1,<1.0.0
+mmcv>=2.0.0rc4,<2.2.0
+mmdet>=3.0.0,<3.3.0
+
+# Rain simulation dependency:
+PyMieScatt
